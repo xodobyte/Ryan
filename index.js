@@ -1,0 +1,6 @@
+const slider=document.getElementById("testimonial-slider");let index=0;const testimonials=[{quote:'"Ryan is a young prodigy. His work ethic and output are top-tier."',author:"Uncle Mike"},{quote:'"Working with Ryan felt effortless. He understood our design vision instantly."',author:"Project Manager"},{quote:'"Clean code. Modern look. Fast delivery. Can\'t ask for more."',author:"Client A"},];function rotateTestimonials(){index=(index+1)%testimonials.length,slider.innerHTML=`
+  <div class="testimonial-slide transition-all duration-700">
+    <p class="text-gray-300 italic">${testimonials[index].quote}</p>
+    <span class="block mt-4 text-gray-500">${testimonials[index].author}</span>
+  </div>
+`}setInterval(rotateTestimonials,4e3),document.getElementById("contactForm").addEventListener("submit",function(t){let e=this.name.value.trim(),s=this.email.value.trim(),a=this.message.value.trim(),i=[];e.length<3&&i.push("Name must be at least 3 characters long."),/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s)||i.push("Please enter a valid email address."),a.length<10&&i.push("Message must be at least 10 characters long."),i.length>0&&(t.preventDefault(),alert(i.join("\n")))});
