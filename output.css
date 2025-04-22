@@ -241,6 +241,10 @@
   .inline-block {
     display: inline-block;
   }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
