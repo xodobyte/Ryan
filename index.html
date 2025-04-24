@@ -9,13 +9,13 @@
   <meta name="keywords"
     content="front-end developer, web development, portfolio, JavaScript, React, HTML, CSS, responsive design, user experience, UI development" />
   <meta name="author" content="Ryan" />
-  <link rel="canonical" href="[Your Website URL]/" />
+  <link rel="canonical" href="https://realryan.vercel.app" />
 
   <meta property="og:title" content="Ryan - Front-End Developer" />
   <meta property="og:description"
     content="Explore the portfolio of Ryan, a skilled front-end developer specializing in creating user-friendly and responsive web experiences. View projects and learn more." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="[Your Website URL]/" />
+  <meta property="og:url" content="https://realryan.vercel.app" />
   <title>Ryan | Front-end Developer</title>
   <link rel="stylesheet" href="output.css">
   <link rel="icon" href="icon.png" type="image/png">
@@ -23,14 +23,12 @@
 
 <body class="bg-black text-gray-300 font-sans scroll-smooth">
 
-  <!-- Hero Section -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
     <h1 class="text-4xl md:text-6xl font-bold text-gray-100">Hi, I'm Ryan</h1>
     <p class="text-lg md:text-2xl mt-4 text-gray-400">19-year-old Front-end Web Developer from South Africa</p>
     <p class="mt-2 text-gray-500">Coding since 14. Inspired by my uncle.</p>
   </section>
 
-  <!-- About Section -->
   <section class="px-6 py-16 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold text-gray-100 mb-4">About Me</h2>
     <p class="text-gray-400 leading-loose">
@@ -40,7 +38,6 @@
     </p>
   </section>
 
-  <!-- Services Section -->
   <section class="bg-zinc-900 py-16 px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-100 mb-8">What I Do</h2>
     <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -80,12 +77,10 @@
 
 
 
-  <!-- Projects Section -->
   <section class="py-16 px-6">
     <h2 class="text-3xl font-bold text-gray-100 text-center mb-10">Projects</h2>
     <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
 
-      <!-- Project Card 1 -->
       <div class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
         <img src="afrifest.png" alt="Portfolio Website" class="w-full h-56 object-cover">
         <div class="p-6 space-y-3">
@@ -98,7 +93,6 @@
         </div>
       </div>
 
-      <!-- Project Card 2 -->
       <div class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
         <img src="colorgame.png" alt="Landing Page" class="w-full h-56 object-cover">
         <div class="p-6 space-y-3">
@@ -110,7 +104,6 @@
             class="inline-block mt-2 text-gray-200 underline hover:text-white">View Live</a>
         </div>
       </div>
-      <!-- Project Card 3 -->
       <div class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
         <img src="meme.png" alt="Landing Page" class="w-full h-56 object-cover">
         <div class="p-6 space-y-3">
@@ -118,7 +111,7 @@
           <p class="text-gray-400">A fun and easy-to-use meme generator 🎭
           </p>
           <p class="text-sm text-gray-500">Tech: Next.JS, TypeScript & TailwindCSS</p>
-          <a href="https://meme-flow.vercel.app/" target="_blank"
+          <a href="https://product-site-demo.com" target="_blank"
             class="inline-block mt-2 text-gray-200 underline hover:text-white">View Live</a>
         </div>
       </div>
@@ -126,8 +119,6 @@
     </div>
   </section>
 
-
-  <!-- Testimonials Section -->
   <section class="bg-zinc-900 py-16 px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-100 mb-8">Testimonials</h2>
     <div id="testimonial-slider" class="max-w-xl mx-auto relative overflow-hidden">
@@ -138,13 +129,11 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section class="py-16 px-6 max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-gray-100 text-center mb-6">Contact Me</h2>
     <p class="text-center text-gray-400 mb-10">Feel free to reach out via form or through the contact details.</p>
 
     <div class="grid md:grid-cols-2 gap-12">
-      <!-- Contact Info -->
       <div class="space-y-6 text-gray-400">
         <div class="flex items-center space-x-3">
           <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
@@ -185,19 +174,32 @@
         </div>
       </div>
 
-      <!-- Contact Form -->
       <form id="contactForm" action="https://api.web3forms.com/submit" method="POST"
         class="bg-zinc-900 p-6 rounded-lg space-y-4 shadow-lg">
-        <input type="hidden" name="access_key" value="f65febc7-37a5-4964-ac5e-faf452c3a938">
+        <input type="hidden" name="access_key" id="access_key">
+        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
 
-        <input type="text" name="name" placeholder="Your Name" required
-          class="w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none">
+        <div class="space-y-1">
+          <input type="text" name="name" placeholder="Your Name" required
+            class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none">
+          <p class="error-message text-red-400 text-sm hidden"></p>
+        </div>
 
-        <input type="email" name="email" placeholder="Your Email" required
-          class="w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none">
+        <div class="space-y-1">
+          <input type="email" name="email" placeholder="Your Email" required
+            class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none">
+          <p class="error-message text-red-400 text-sm hidden"></p>
+        </div>
 
-        <textarea name="message" placeholder="Your Message" required rows="5"
-          class="w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none"></textarea>
+        <div class="space-y-1">
+          <textarea name="message" placeholder="Your Message" required rows="5"
+            class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none"></textarea>
+          <p class="error-message text-red-400 text-sm hidden"></p>
+        </div>
+
+        <div class="g-recaptcha" id="recaptcha-container" data-sitekey=""></div>
+
+        <div id="form-messages" class="text-center text-sm hidden"></div>
 
         <button type="submit" class="w-full bg-gray-300 text-black py-3 rounded transition hover:bg-gray-50">Send
           Message</button>
@@ -205,7 +207,6 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="text-center py-6 text-gray-500 bg-black border-t border-zinc-800">
     © 2025 Ryan. All rights reserved.
   </footer>
