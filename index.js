@@ -26,36 +26,17 @@ function rotateTestimonials() {
 }
 setInterval(rotateTestimonials, 4e3);
 
-// Contact
-
+// Contact form handler
 (function () {
-  const accessKey = atob("ZjY1ZmViYzctMzdhNS00OTY0LWFjNWUtZmFmNDUyYzNhOTM4");
-  const recaptchaChunks = [
-    "NkxkOTdTSXI=",
-    "QUFBQUFFa0dVd2sySExGX19nSUs5MkZa",
-    "SmtFMGdTQ0Y=",
-  ];
-
-  // Fix: validate Base64 string length is multiple of 4
-  const paddedString = recaptchaChunks
-    .join("")
-    .padEnd(Math.ceil(recaptchaChunks.join("").length / 4) * 4, "=");
-  const recaptchaKey = atob(paddedString);
-
+  const accessKey = "f65febc7-37a5-4964-ac5e-faf452c3a938";
   document.getElementById("access_key").value = accessKey;
 
   const script = document.createElement("script");
-  script.src = `https://www.google.com/recaptcha/api.js`;
+  script.src =
+    "https://www.google.com/recaptcha/api.js?render=6LftCCMrAAAAAPIAeXqSKGRDLmvz19bMqKWMtn8_";
   script.async = true;
   script.defer = true;
   document.body.appendChild(script);
-
-  window.addEventListener("load", () => {
-    const container = document.getElementById("recaptcha-container");
-    if (container) {
-      container.setAttribute("data-sitekey", recaptchaKey);
-    }
-  });
 })();
 
 const form = document.getElementById("contactForm");
@@ -88,6 +69,7 @@ const blockedDomains = [
 const messages = document.getElementById("form-messages");
 
 form.addEventListener("submit", function (e) {
+  e.preventDefault();
   let valid = true;
   const inputs = form.querySelectorAll(".input-field");
 
@@ -132,40 +114,41 @@ form.addEventListener("submit", function (e) {
     }
   }
 
-  const recaptchaResponse = document.getElementById(
-    "g-recaptcha-response"
-  ).value;
-  if (!recaptchaResponse) {
-    e.preventDefault();
-    messages.classList.remove("hidden", "text-green-400");
-    messages.classList.add("text-red-400");
-    messages.textContent = "⚠️ Please complete the CAPTCHA.";
-    return;
-  }
+  if (!valid) return;
 
-  if (!valid) {
-    e.preventDefault();
-    return;
-  }
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute("6LftCCMrAAAAAPIAeXqSKGRDLmvz19bMqKWMtn8_", { action: "submit" })
+      .then(function (token) {
+        document.getElementById("g-recaptcha-response").value = token;
 
-  e.preventDefault();
-  const formData = new FormData(form);
+        const formData = new FormData(form);
 
-  fetch(form.action, {
-    method: "POST",
-    body: formData,
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      messages.classList.remove("hidden", "text-red-400");
-      messages.classList.add("text-green-400");
-      messages.textContent = "✅ Message sent successfully!";
-      form.reset();
-      grecaptcha.reset();
-    })
-    .catch(() => {
-      messages.classList.remove("hidden", "text-green-400");
-      messages.classList.add("text-red-400");
-      messages.textContent = "❌ Failed to send message. Try again later.";
-    });
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            messages.classList.remove("hidden", "text-red-400");
+            messages.classList.add("text-green-400");
+            messages.textContent = "✅ Message sent successfully!";
+            setTimeout(() => {
+              messages.classList.add("hidden");
+              messages.textContent = "";
+            }, 3000);
+            form.reset();
+          })
+          .catch(() => {
+            messages.classList.remove("hidden", "text-green-400");
+            messages.classList.add("text-red-400");
+            messages.textContent =
+              "❌ Failed to send message. Try again later.";
+            setTimeout(() => {
+              messages.classList.add("hidden");
+              messages.textContent = "";
+            }, 3000);
+          });
+      });
+  });
 });
