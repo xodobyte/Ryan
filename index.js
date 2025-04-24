@@ -35,7 +35,12 @@ setInterval(rotateTestimonials, 4e3);
     "QUFBQUFFa0dVd2sySExGX19nSUs5MkZa",
     "SmtFMGdTQ0Y=",
   ];
-  const recaptchaKey = atob(recaptchaChunks.join(""));
+
+  // Fix: validate Base64 string length is multiple of 4
+  const paddedString = recaptchaChunks
+    .join("")
+    .padEnd(Math.ceil(recaptchaChunks.join("").length / 4) * 4, "=");
+  const recaptchaKey = atob(paddedString);
 
   document.getElementById("access_key").value = accessKey;
 
@@ -143,7 +148,6 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // AJAX request to submit form with feedback
   e.preventDefault();
   const formData = new FormData(form);
 
