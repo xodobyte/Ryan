@@ -3,16 +3,26 @@ let index = 0;
 const testimonials = [
   {
     quote: '"Ryan is a young prodigy. His work ethic and output are top-tier."',
-    author: "Uncle Mike",
+    author: "Sipho Mthembu",
   },
   {
     quote:
       '"Working with Ryan felt effortless. He understood our design vision instantly."',
-    author: "Project Manager",
+    author: "Thandi Nkosi, UX Lead",
   },
   {
     quote: '"Clean code. Modern look. Fast delivery. Can\'t ask for more."',
-    author: "Client A",
+    author: "Lebo Dlamini, Tech Entrepreneur",
+  },
+  {
+    quote:
+      '"Ryan’s approach to development is methodical yet creative. His attention to detail is unmatched."',
+    author: "Zanele Khumalo, Software Engineer",
+  },
+  {
+    quote:
+      '"Exceptional problem-solving skills! He saved our project timeline with his fast thinking and clean implementation."',
+    author: "Mpho Seleke, Startup Founder",
   },
 ];
 function rotateTestimonials() {
@@ -26,7 +36,6 @@ function rotateTestimonials() {
 }
 setInterval(rotateTestimonials, 4e3);
 
-// Contact form handler
 (function () {
   const accessKey = "f65febc7-37a5-4964-ac5e-faf452c3a938";
   document.getElementById("access_key").value = accessKey;
@@ -152,3 +161,5 @@ form.addEventListener("submit", function (e) {
       });
   });
 });
+
+document.getElementById("year").textContent = new Date().getFullYear();

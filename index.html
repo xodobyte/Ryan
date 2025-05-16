@@ -19,15 +19,20 @@
   <title>Ryan | Front-end Developer</title>
   <link rel="stylesheet" href="output.css">
   <link rel="icon" href="icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="bg-black text-gray-300 font-sans scroll-smooth">
 
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-    <h1 class="text-4xl md:text-6xl font-bold text-gray-100">Hi, I'm Ryan</h1>
+    <h1 class="text-4xl md:text-6xl font-bold text-gray-100">
+      <span>H</span><span>i</span> <span>👋</span>, <span>I</span><span>'</span><span>m</span>
+      <span>R</span><span>y</span><span>a</span><span>n</span>
+    </h1>
     <p class="text-lg md:text-2xl mt-4 text-gray-400">19-year-old Front-end Web Developer from South Africa</p>
     <p class="mt-2 text-gray-500">Coding since 14. Inspired by my uncle.</p>
   </section>
+
 
   <section class="px-6 py-16 max-w-4xl mx-auto text-center">
     <h2 class="text-3xl font-bold text-gray-100 mb-4">About Me</h2>
@@ -80,49 +85,61 @@
     <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
 
       <div class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
-        <img src="afrifest.png" alt="Portfolio Website" class="w-full h-56 object-cover">
+        <img src="afrifest.webp" alt="Portfolio Website" class="w-full h-56 object-cover">
         <div class="p-6 space-y-3">
-          <h3 class="text-xl font-semibold text-gray-100">Event Host Page</h3>
-          <p class="text-gray-400">This project showcases AfriFest Co. A South African event hosting company designed
-            with a clean and responsive Tailwind CSS.</p>
-          <p class="text-sm text-gray-500">Tech: HTML, TailwindCSS & JavaScript</p>
+          <h3 class="text-xl font-semibold text-gray-100">🎭 Event Host Page</h3>
+          <p class="text-gray-400">This project showcases AfriFest Co., a South African event hosting company built with
+            responsive Tailwind CSS.</p>
+          <p class="text-sm text-gray-500 flex items-center">
+            Tech: <i class="fab fa-html5 text-orange-500 mx-1"></i>
+            <i class="fab fa-css3-alt text-blue-500 mx-1"></i>
+            <i class="fab fa-js text-yellow-500 mx-1"></i>
+          </p>
           <a href="https://afri-fest-co.vercel.app/" target="_blank"
-            class="inline-block mt-2 text-gray-200 underline hover:text-white">View Live</a>
+            class="inline-block mt-2 text-gray-200 underline hover:text-white">🔗 View Live</a>
         </div>
       </div>
 
       <div class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
-        <img src="colorgame.png" alt="Landing Page" class="w-full h-56 object-cover">
+        <img src="colorgame.webp" alt="Landing Page" class="w-full h-56 object-cover">
         <div class="p-6 space-y-3">
-          <h3 class="text-xl font-semibold text-gray-100">Color Game</h3>
-          <p class="text-gray-400">This is a simple color picker game
+          <h3 class="text-xl font-semibold text-gray-100">🎨 Color Game</h3>
+          <p class="text-gray-400">A simple yet engaging color picker game!</p>
+          <p class="text-sm text-gray-500 flex items-center">
+            Tech: <i class="fab fa-react text-blue-400 mx-1"></i>
+            <i class="fab fa-js text-yellow-500 mx-1"></i>
+            <i class="fab fa-css3-alt text-blue-500 mx-1"></i>
           </p>
-          <p class="text-sm text-gray-500">Tech: Next.JS, TypeScript & TailwindCSS</p>
           <a href="https://color-click-game.vercel.app/" target="_blank"
-            class="inline-block mt-2 text-gray-200 underline hover:text-white">View Live</a>
+            class="inline-block mt-2 text-gray-200 underline hover:text-white">🔗 View Live</a>
         </div>
       </div>
+
       <div class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
-        <img src="meme.png" alt="Landing Page" class="w-full h-56 object-cover">
+        <img src="meme.webp" alt="Landing Page" class="w-full h-56 object-cover">
         <div class="p-6 space-y-3">
-          <h3 class="text-xl font-semibold text-gray-100">Meme Gen</h3>
-          <p class="text-gray-400">A fun and easy-to-use meme generator 🎭
+          <h3 class="text-xl font-semibold text-gray-100">🤣 Meme Gen</h3>
+          <p class="text-gray-400">A fun and easy-to-use meme generator 🎭.</p>
+          <p class="text-sm text-gray-500 flex items-center">
+            Tech: <i class="fab fa-react text-blue-400 mx-1"></i>
+            <i class="fab fa-js text-yellow-500 mx-1"></i>
+            <i class="fab fa-css3-alt text-blue-500 mx-1"></i>
           </p>
-          <p class="text-sm text-gray-500">Tech: Next.JS, TypeScript & TailwindCSS</p>
-          <a href="https://product-site-demo.com" target="_blank"
-            class="inline-block mt-2 text-gray-200 underline hover:text-white">View Live</a>
+          <a href="https://meme-flow.vercel.app/" target="_blank"
+            class="inline-block mt-2 text-gray-200 underline hover:text-white">🔗 View Live</a>
         </div>
       </div>
 
     </div>
   </section>
 
+
   <section class="bg-zinc-900 py-16 px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-100 mb-8">Testimonials</h2>
     <div id="testimonial-slider" class="max-w-xl mx-auto relative overflow-hidden">
       <div class="testimonial-slide transition-all duration-700">
         <p class="text-gray-300 italic">"Ryan is a young prodigy. His work ethic and output are top-tier."</p>
-        <span class="block mt-4 text-gray-500">– Uncle Mike</span>
+        <span class="block mt-4 text-gray-500">- Sibusiso Ndlovu</span>
       </div>
     </div>
   </section>
@@ -130,7 +147,6 @@
   <section class="py-16 px-6 max-w-6xl mx-auto">
     <h2 class="text-3xl font-bold text-gray-100 text-center mb-6">Contact Me</h2>
     <p class="text-center text-gray-400 mb-10">Feel free to reach out via form or through the contact details.</p>
-
     <div class="grid md:grid-cols-2 gap-12">
       <div class="space-y-6 text-gray-400">
         <div class="flex items-center space-x-3">
@@ -161,7 +177,6 @@
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
           </svg>
-
           </svg>
           <div>
             <h3 class="text-xl text-gray-100 font-semibold">Socials</h3>
@@ -179,7 +194,6 @@
         <input type="text" name="name" placeholder="Your Name" autocomplete="name"
           class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none" />
         <p class="error-message text-red-400 text-sm hidden"></p>
-
 
         <div class="space-y-1">
           <input type="email" name="email" placeholder="Your Email" autocomplete="email"
@@ -205,7 +219,7 @@
   </section>
 
   <footer class="text-center py-6 text-gray-500 bg-black border-t border-zinc-800">
-    © 2025 Ryan. All rights reserved.
+    © <span id="year"></span> Ryan. All rights reserved.
   </footer>
 
   <script src="index.js"></script>
