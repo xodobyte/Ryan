@@ -28,3 +28,8 @@ Hi, I'm **Ryan**, a creative frontend developer passionate about building modern
 ⚛️ React.js / Next.js
 🎨 Tailwind CSS / SCSS
 🛠️ Git / GitHub / Vite / Webpack
+```
+
+---
+
+<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=8A2BE2&vCenter=true&width=450&lines=Hi+there%2C+I'm+Ryan.;I+build+modern+frontend+experiences."> </p>
