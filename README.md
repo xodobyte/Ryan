@@ -14,7 +14,7 @@
 
 Hi, I'm **Ryan**, a creative frontend developer passionate about building modern, performant, and visually engaging websites. I turn ideas into interactive experiences using the latest web technologies.
 
-- 💼 2+ years of hands-on frontend experience  
+- 💼 4+ years of hands-on frontend experience  
 - 💡 Strong focus on accessibility and user experience  
 - 🎨 Design-oriented approach with pixel-perfect implementation  
 - 🌍 Based in South Africa, collaborating globally  
