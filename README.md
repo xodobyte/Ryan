@@ -1,7 +1,6 @@
 <h1 align="center">🌐 Ryan – Frontend Web Developer</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/role-frontend--dev-blueviolet?style=flat-square">
-  <img src="https://img.shields.io/badge/tech-stack-HTML%2FCSS%2FJS%2FReact-8A2BE2?style=flat-square">
 </p>
 
 <p align="center">
