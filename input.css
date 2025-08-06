@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+p.spider-flicker {
+  font-size: clamp(2.25rem, 10vw, 3.75rem);
+}
+
 /* Keyframes for the main text jitter */
 @keyframes glitch {
   0% {
@@ -105,11 +109,10 @@
     position: relative;
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 6rem;
     color: #fff;
     text-transform: uppercase;
 
-    animation: glitch 1.5s infinite linear;
+    animation: glitch 4.9s infinite linear;
   }
 
   .spider-flicker::before,
@@ -126,7 +129,7 @@
   .spider-flicker::before {
     color: #f02d2d;
     left: 2px;
-    animation: glitch-top 1.7s infinite linear reverse;
+    animation: glitch-top 3.9s infinite linear reverse;
   }
 
   .spider-flicker::after {
