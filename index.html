@@ -31,59 +31,109 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
 
-  <body class="relative bg-black text-gray-300 font-sans scroll-smooth">
+  <body class="relative text-gray-300 font-sans scroll-smooth">
+    <div class="bg-luxury-ambient"></div>
+    <div class="bg-light-drift"></div>
     <section
-      class="min-h-screen flex flex-col justify-center items-center text-center px-4 md:px-8"
+      class="relative isolate min-h-screen px-6 md:px-16 py-20 flex flex-col-reverse md:flex-row items-center justify-center gap-12 text-center md:text-left overflow-hidden"
     >
-      <h1 class="text-4xl md:text-6xl font-bold text-gray-100 glowing-text">
-        <span class="letter">H</span><span class="letter">i</span>
-        <span class="wave">👋</span>, <span class="letter">I</span
-        ><span class="letter">'</span><span class="letter">m</span>
-        <span class="letter">R</span><span class="letter">y</span
-        ><span class="letter">a</span><span class="letter">n</span>
-      </h1>
+      <div class="flex-1 space-y-6 z-10">
+        <h1 class="text-4xl md:text-6xl font-bold --text-primary glowing-text">
+          <span class="letter">H</span><span class="letter">i</span
+          ><span class="wave">👋</span>, <span class="letter">I</span
+          ><span class="letter">'</span><span class="letter">m</span>
+          <span class="letter">R</span><span class="letter">y</span
+          ><span class="letter">a</span><span class="letter">n</span>
+        </h1>
 
-      <p class="text-lg md:text-2xl mt-4 max-w-2xl text-gray-400">
-        20-year-old Front-end Web Developer from South Africa
-      </p>
+        <p class="text-lg md:text-2xl --text-secondary">
+          20-year-old Front-end Web Developer from South Africa
+        </p>
 
-      <p
-        class="spider-flicker text-sm md:text-lg mt-2 max-w-xl text-gray-500"
-        data-text="Coding since 14. Inspired by my uncle"
-      >
-        Coding since 14. Inspired by my uncle.
-      </p>
-    </section>
-
-    <section class="px-6 py-16 max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 fade-in-up">
-        About Me
-      </h2>
-
-      <p
-        class="text-gray-400 leading-relaxed text-lg md:text-xl fade-in-up delay-200 max-w-2xl mx-auto"
-      >
-        👋 I'm Ryan — a builder of slick, responsive interfaces that actually
-        feel good to use. My coding journey began at 14, sparked by my uncle
-        handing me a broken site and saying "Fix it." Since then, I've been
-        obsessed with front-end — especially clean design, snappy UX, and
-        accessible code. Whether it’s Tailwind, React, or vanilla HTML/CSS, I
-        bring ideas to life with focus and flair.
-      </p>
-    </section>
-
-    <section
-      class="relative bg-zinc-900 py-16 px-6 text-center glow-bg overflow-hidden"
-    >
-      <h2 class="text-3xl font-bold text-gray-100 mb-8">What I Do</h2>
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div
-          class="group p-6 bg-zinc-800 rounded-xl shadow-xl hover:scale-[1.03] transition relative z-10 hover:shadow-white/10 fade-in-up delay-100"
+        <p
+          class="spider-flicker text-sm md:text-lg text-gray-500"
+          data-text="Coding since 14. Inspired by my uncle"
         >
+          Coding since 14. Inspired by my uncle.
+        </p>
+
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+          <a
+            href="#projects"
+            class="px-6 py-3 bg-gradient-to-br from-[#E5E4E2] to-[#A9A9A9] text-black text-base font-semibold rounded-xl shadow-[0_2px_20px_rgba(255,255,255,0.2)] hover:from-[#D9D9D9] hover:to-[#888888] transition-all duration-300 hover:scale-[1.04] active:scale-95 border border-white/20"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="#contact"
+            class="px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-base font-semibold rounded-xl hover:bg-white/20 hover:border-white/30 transition hover:scale-105"
+          >
+            Get in Touch
+          </a>
+        </div>
+      </div>
+
+      <div class="flex-1 w-full max-w-md z-0">
+        <img
+          src="front.svg"
+          alt="Frontend Developer SVG"
+          class="w-full h-auto object-contain drop-shadow-2xl"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <section
+      class="px-6 py-20 max-w-5xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12"
+    >
+      <div class="w-full max-w-sm">
+        <img
+          src="about.svg"
+          alt="About me SVG"
+          class="w-full h-auto drop-shadow-2xl"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-1 space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white fade-in-up">
+          About Me
+        </h2>
+
+        <p
+          class="text-gray-300 leading-relaxed text-lg md:text-xl bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl shadow-xl p-6"
+        >
+          👋 I'm Ryan — a frontend engineer passionate about crafting sleek,
+          responsive interfaces that feel fast, clean, and intentional. My
+          journey started at 14, when my uncle handed me a broken site and said:
+          <span class="italic">"Fix it."</span> From that moment, I was hooked
+          on code.
+        </p>
+
+        <p class="--text-secondary leading-relaxed text-base md:text-lg">
+          Whether it's Tailwind, React, or just raw HTML/CSS, I build with
+          clarity, precision, and a focus on user experience. My aim? To blur
+          the line between design and development.
+        </p>
+      </div>
+    </section>
+
+    <section class="relative py-20 px-6 text-center glow-bg overflow-hidden">
+      <h2 class="text-3xl font-bold --text-primary mb-12 tracking-tight">
+        What I Do
+      </h2>
+      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div
+          class="group relative p-6 bg-zinc-800 rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:shadow-white/10"
+        >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+          ></div>
           <div class="flex justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12 text-indigo-400"
+              class="h-12 w-12 text-indigo-400 group-hover:scale-110 transition duration-300"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -96,20 +146,26 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-100 mb-2">
+          <h3
+            class="text-xl font-semibold --text-primary mb-2 group-hover:text-indigo-300 transition"
+          >
             Responsive Web Design
           </h3>
-          <p class="text-gray-400">
+          <p class="--text-secondary group-hover:text-gray-300 transition">
             Mobile-first designs that adapt beautifully on any screen.
           </p>
         </div>
+
         <div
-          class="group p-6 bg-zinc-800 rounded-xl shadow-xl hover:scale-[1.03] transition relative z-10 hover:shadow-white/10 fade-in-up delay-200"
+          class="group relative p-6 bg-zinc-800 rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:shadow-white/10"
         >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+          ></div>
           <div class="flex justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12 text-pink-400"
+              class="h-12 w-12 text-pink-400 group-hover:scale-110 transition duration-300"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -122,18 +178,26 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-100 mb-2">UI/UX Focus</h3>
-          <p class="text-gray-400">
+          <h3
+            class="text-xl font-semibold --text-primary mb-2 group-hover:text-pink-300 transition"
+          >
+            UI/UX Focus
+          </h3>
+          <p class="--text-secondary group-hover:text-gray-300 transition">
             Pixel-perfect interfaces with clean, accessible layouts.
           </p>
         </div>
+
         <div
-          class="group p-6 bg-zinc-800 rounded-xl shadow-xl hover:scale-[1.03] transition relative z-10 hover:shadow-white/10 fade-in-up delay-300"
+          class="group relative p-6 bg-zinc-800 rounded-2xl shadow-xl overflow-hidden transition-transform duration-300 hover:scale-[1.05] hover:shadow-white/10"
         >
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"
+          ></div>
           <div class="flex justify-center mb-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-12 w-12 text-teal-400"
+              class="h-12 w-12 text-teal-400 group-hover:scale-110 transition duration-300"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -146,196 +210,314 @@
               />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-100 mb-2">
+          <h3
+            class="text-xl font-semibold --text-primary mb-2 group-hover:text-teal-300 transition"
+          >
             Modern Tech Stack
           </h3>
-          <p class="text-gray-400">
+          <p class="--text-secondary group-hover:text-gray-300 transition">
             Expertise in HTML, CSS, JS, Tailwind, and modern libraries.
           </p>
         </div>
       </div>
     </section>
 
-    <section class="py-16 px-6">
-      <h2 class="text-3xl font-bold text-gray-100 text-center mb-10">
-        Projects
-      </h2>
+    <section class="py-16 px-6" id="projects">
+      <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+
       <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <!-- Project Card -->
         <div
-          class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition"
+          class="rounded-xl overflow-hidden group relative transition hover:scale-[1.02]"
         >
-          <img
-            src="afrifest.webp"
-            alt="Portfolio Website"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-6 space-y-3">
-            <h3 class="text-xl font-semibold text-gray-100">
-              🎭 Event Host Page
-            </h3>
-            <p class="text-gray-400">
-              This project showcases AfriFest Co., a South African event hosting
-              company built with responsive Tailwind CSS.
-            </p>
-            <p class="text-sm text-gray-500 flex items-center">
-              Tech: <i class="fab fa-html5 text-orange-500 mx-1"></i>
-              <i class="fab fa-css3-alt text-blue-500 mx-1"></i>
-              <i class="fab fa-js text-yellow-500 mx-1"></i>
-            </p>
+          <!-- Image with border -->
+          <div
+            class="relative overflow-hidden border border-white/10 rounded-t-xl"
+          >
+            <img
+              src="afrifest.webp"
+              alt="Event Host Page"
+              class="w-full h-72 object-cover group-hover:scale-105 transition duration-500 ease-in-out"
+            />
+            <!-- Hover overlay -->
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4"
+            >
+              <h3 class="text-2xl font-semibold text-white mb-2">
+                🎭 Event Host Page
+              </h3>
+              <p class="text-sm text-gray-300">
+                AfriFest Co. — Responsive, branded event experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bottom content -->
+          <div class="p-6 relative min-h-[80px]">
+            <!-- Tech stack icons -->
+            <div class="flex gap-3 text-xl">
+              <i class="fab fa-html5 text-orange-500"></i>
+              <i class="fab fa-css3-alt text-blue-500"></i>
+              <i class="fab fa-js text-yellow-400"></i>
+            </div>
+            <!-- View Live -->
             <a
               href="https://afri-fest-co.vercel.app/"
               target="_blank"
-              class="inline-block mt-2 text-gray-200 underline hover:text-white"
-              >🔗 View Live</a
+              class="absolute bottom-6 right-6 bg-gradient-to-br from-[#E5E4E2] to-[#A9A9A9] text-black font-semibold text-sm py-2 px-4 rounded-lg shadow-md hover:from-[#D9D9D9] hover:to-[#888888] transition hover:scale-105 active:scale-95"
             >
+              🔗 View Live
+            </a>
           </div>
         </div>
 
+        <!-- Color Game -->
         <div
-          class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition"
+          class="rounded-xl overflow-hidden group relative transition hover:scale-[1.02]"
         >
-          <img
-            src="colorgame.webp"
-            alt="Landing Page"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-6 space-y-3">
-            <h3 class="text-xl font-semibold text-gray-100">🎨 Color Game</h3>
-            <p class="text-gray-400">
-              A simple yet engaging color picker game!
-            </p>
-            <p class="text-sm text-gray-500 flex items-center">
-              Tech: <i class="fab fa-react text-blue-400 mx-1"></i>
-              <i class="fab fa-js text-yellow-500 mx-1"></i>
-              <i class="fab fa-css3-alt text-blue-500 mx-1"></i>
-            </p>
+          <div
+            class="relative overflow-hidden border border-white/10 rounded-t-xl"
+          >
+            <img
+              src="colorgame.webp"
+              alt="Color Game"
+              class="w-full h-72 object-cover group-hover:scale-105 transition duration-500 ease-in-out"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4"
+            >
+              <h3 class="text-2xl font-semibold text-white mb-2">
+                🎨 Color Game
+              </h3>
+              <p class="text-sm text-gray-300">
+                A fun & minimal color picker game using pure JS.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 relative min-h-[80px]">
+            <div class="flex gap-3 text-xl">
+              <i class="fab fa-react text-blue-400"></i>
+              <i class="fab fa-js text-yellow-400"></i>
+              <i class="fab fa-css3-alt text-blue-500"></i>
+            </div>
             <a
               href="https://color-click-game.vercel.app/"
               target="_blank"
-              class="inline-block mt-2 text-gray-200 underline hover:text-white"
-              >🔗 View Live</a
+              class="absolute bottom-6 right-6 bg-gradient-to-br from-[#E5E4E2] to-[#A9A9A9] text-black font-semibold text-sm py-2 px-4 rounded-lg shadow-md hover:from-[#D9D9D9] hover:to-[#888888] transition hover:scale-105 active:scale-95"
             >
+              🔗 View Live
+            </a>
           </div>
         </div>
 
+        <!-- Meme Generator -->
         <div
-          class="bg-zinc-900 rounded-xl shadow overflow-hidden hover:scale-[1.02] transition"
+          class="rounded-xl overflow-hidden group relative transition hover:scale-[1.02]"
         >
-          <img
-            src="meme.webp"
-            alt="Landing Page"
-            class="w-full h-56 object-cover"
-          />
-          <div class="p-6 space-y-3">
-            <h3 class="text-xl font-semibold text-gray-100">🤣 Meme Gen</h3>
-            <p class="text-gray-400">
-              A fun and easy-to-use meme generator 🎭.
-            </p>
-            <p class="text-sm text-gray-500 flex items-center">
-              Tech: <i class="fab fa-react text-blue-400 mx-1"></i>
-              <i class="fab fa-js text-yellow-500 mx-1"></i>
-              <i class="fab fa-css3-alt text-blue-500 mx-1"></i>
-            </p>
+          <div
+            class="relative overflow-hidden border border-white/10 rounded-t-xl"
+          >
+            <img
+              src="meme.webp"
+              alt="Meme Generator"
+              class="w-full h-72 object-cover group-hover:scale-105 transition duration-500 ease-in-out"
+            />
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-center items-center text-center px-4"
+            >
+              <h3 class="text-2xl font-semibold text-white mb-2">
+                🤣 Meme Gen
+              </h3>
+              <p class="text-sm text-gray-300">
+                Meme Generator with fast UI and live text render.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-6 relative min-h-[80px]">
+            <div class="flex gap-3 text-xl">
+              <i class="fab fa-react text-blue-400"></i>
+              <i class="fab fa-js text-yellow-400"></i>
+              <i class="fab fa-css3-alt text-blue-500"></i>
+            </div>
             <a
               href="https://meme-flow.vercel.app/"
               target="_blank"
-              class="inline-block mt-2 text-gray-200 underline hover:text-white"
-              >🔗 View Live</a
+              class="absolute bottom-6 right-6 bg-gradient-to-br from-[#E5E4E2] to-[#A9A9A9] text-black font-semibold text-sm py-2 px-4 rounded-lg shadow-md hover:from-[#D9D9D9] hover:to-[#888888] transition hover:scale-105 active:scale-95"
             >
+              🔗 View Live
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="bg-zinc-900 py-24 px-6 text-center relative overflow-hidden"
-    >
-      <h2 class="text-3xl font-bold text-gray-100 mb-12">Testimonials</h2>
+    <section class="py-24 px-6 text-center relative overflow-hidden">
+      <h2 class="text-3xl font-bold --text-primary mb-12 tracking-tight">
+        Testimonials
+      </h2>
+
+      <!-- Background glow -->
+      <div
+        class="absolute inset-0 -z-10 pointer-events-none bg-gradient-radial from-white/5 via-white/2 to-transparent blur-3xl"
+      ></div>
       <div
         class="platinum-orb pointer-events-none z-0 animate-float opacity-10"
       ></div>
-      <div class="relative max-w-xl mx-auto">
-        <div
-          class="absolute inset-0 -z-10 pointer-events-none bg-gradient-radial from-white/5 via-white/2 to-transparent blur-3xl"
-        ></div>
-        <div id="testimonial-slider" class="relative z-10"></div>
+
+      <!-- Carousel container -->
+      <div class="relative w-full overflow-hidden max-w-5xl mx-auto">
+        <div class="flex gap-6 animate-carousel">
+          <!-- Duplicated content for seamless loop -->
+          <div class="flex gap-6 shrink-0 min-w-full">
+            <!-- CARD 1 -->
+            <blockquote class="flex-1 bg-zinc-800 p-6 rounded-2xl shadow-lg">
+              <p class="italic text-white/90">
+                ❝ Working with Ryan was a game changer... ❞
+              </p>
+              <footer class="mt-4 text-sm font-semibold text-white/60">
+                – Sibusiso Ndlovu
+              </footer>
+            </blockquote>
+
+            <!-- CARD 2 -->
+            <blockquote class="flex-1 bg-zinc-800 p-6 rounded-2xl shadow-lg">
+              <p class="italic text-white/90">
+                ❝ Ryan’s scalable solutions are rare... ❞
+              </p>
+              <footer class="mt-4 text-sm font-semibold text-white/60">
+                – Amanda Khoza
+              </footer>
+            </blockquote>
+
+            <!-- CARD 3 -->
+            <blockquote class="flex-1 bg-zinc-800 p-6 rounded-2xl shadow-lg">
+              <p class="italic text-white/90">
+                ❝ Always improves UX beyond expectations. ❞
+              </p>
+              <footer class="mt-4 text-sm font-semibold text-white/60">
+                – Themba Mokoena
+              </footer>
+            </blockquote>
+          </div>
+
+          <!-- Duplicate again for infinite loop -->
+          <div class="flex gap-6 shrink-0 min-w-full">
+            <!-- CARD 4 -->
+            <blockquote class="flex-1 bg-zinc-800 p-6 rounded-2xl shadow-lg">
+              <p class="italic text-white/90">
+                ❝ Refactored our entire pipeline. Beast. ❞
+              </p>
+              <footer class="mt-4 text-sm font-semibold text-white/60">
+                – Julia van Wyk
+              </footer>
+            </blockquote>
+
+            <!-- CARD 5 -->
+            <blockquote class="flex-1 bg-zinc-800 p-6 rounded-2xl shadow-lg">
+              <p class="italic text-white/90">
+                ❝ Handles async logic + animations like magic. ❞
+              </p>
+              <footer class="mt-4 text-sm font-semibold text-white/60">
+                – Nhlanhla Dube
+              </footer>
+            </blockquote>
+
+            <!-- CARD 1 again -->
+            <blockquote class="flex-1 bg-zinc-800 p-6 rounded-2xl shadow-lg">
+              <p class="italic text-white/90">
+                ❝ Working with Ryan was a game changer... ❞
+              </p>
+              <footer class="mt-4 text-sm font-semibold text-white/60">
+                – Sibusiso Ndlovu
+              </footer>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="py-16 px-6 max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-gray-100 text-center mb-6">
+      <h2 class="text-3xl font-bold --text-primary text-center mb-6">
         Contact Me
       </h2>
-      <p class="text-center text-gray-400 mb-10">
+      <p class="text-center --text-secondary mb-10">
         Feel free to reach out via form or through the contact details.
       </p>
       <div class="grid md:grid-cols-2 gap-12">
-        <div class="space-y-6 text-gray-400">
-          <div class="flex items-center space-x-3">
-            <svg
-              class="w-5 h-5 text-gray-300"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.09 1.92l-7.5 4.29a2.25 2.25 0 01-2.22 0l-7.5-4.29A2.25 2.25 0 012.25 6.993V6.75"
-              />
-            </svg>
+        <div class="space-y-8 --text-secondary">
+          <div class="flex items-start gap-4">
+            <div class="pt-1">
+              <svg
+                class="w-6 h-6 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.09 1.92l-7.5 4.29a2.25 2.25 0 01-2.22 0l-7.5-4.29A2.25 2.25 0 012.25 6.993V6.75"
+                />
+              </svg>
+            </div>
             <div>
-              <h3 class="text-xl text-gray-100 font-semibold">Email</h3>
-              <p>officialrtskhosana@gmail.com</p>
+              <h3 class="text-xl font-semibold --text-primary">Email</h3>
+              <p class="text-sm">officialrtskhosana@gmail.com</p>
             </div>
           </div>
-          <div class="flex items-center space-x-3">
-            <svg
-              class="w-5 h-5 text-gray-300"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 2.25c4.556 0 8.25 3.694 8.25 8.25 0 5.25-8.25 11.25-8.25 11.25S3.75 15.75 3.75 10.5c0-4.556 3.694-8.25 8.25-8.25zm0 10.125a1.875 1.875 0 100-3.75 1.875 1.875 0 000 3.75z"
-              />
-            </svg>
+
+          <div class="flex items-start gap-4">
+            <div class="pt-1">
+              <svg
+                class="w-6 h-6 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 2.25c4.556 0 8.25 3.694 8.25 8.25 0 5.25-8.25 11.25-8.25 11.25S3.75 15.75 3.75 10.5c0-4.556 3.694-8.25 8.25-8.25zm0 10.125a1.875 1.875 0 100-3.75 1.875 1.875 0 000 3.75z"
+                />
+              </svg>
+            </div>
             <div>
-              <h3 class="text-xl text-gray-100 font-semibold">Location</h3>
-              <p>South Africa</p>
+              <h3 class="text-xl font-semibold --text-primary">Location</h3>
+              <p class="text-sm">South Africa</p>
             </div>
           </div>
-          <div class="flex items-start space-x-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="text-gray-100 mt-1 size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
-              />
-            </svg>
+
+          <div class="flex items-start gap-4">
+            <div class="pt-1">
+              <svg
+                class="w-6 h-6 text-gray-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 0 1-1.161.886l-.143.048a1.107 1.107 0 0 0-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 0 1-1.652.928l-.679-.906a1.125 1.125 0 0 0-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 0 0-8.862 12.872M12.75 3.031a9 9 0 0 1 6.69 14.036m0 0-.177-.529A2.25 2.25 0 0 0 17.128 15H16.5l-.324-.324a1.453 1.453 0 0 0-2.328.377l-.036.073a1.586 1.586 0 0 1-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 0 1-5.276 3.67m0 0a9 9 0 0 1-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+                />
+              </svg>
+            </div>
             <div>
-              <h3 class="text-xl text-gray-100 font-semibold">Socials</h3>
-              <p class="space-x-4">
+              <h3 class="text-xl font-semibold --text-primary">Socials</h3>
+              <div class="flex gap-4 mt-1">
                 <a
-                  href="https://github.com/realryandev"
-                  class="hover:underline text-gray-300"
+                  href="https://github.com/xodobyte"
                   target="_blank"
-                  >GitHub</a
+                  class="text-sm text-gray-300 hover:underline"
                 >
-              </p>
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -344,7 +526,7 @@
           id="contactForm"
           action="https://api.web3forms.com/submit"
           method="POST"
-          class="bg-zinc-900 p-6 rounded-lg space-y-4 shadow-lg"
+          class="bg-[#1A1A1A] p-8 rounded-2xl shadow-xl space-y-6 transition-all duration-300 border border-white/10 backdrop-blur-md"
         >
           <input type="hidden" name="access_key" id="access_key" />
           <input
@@ -352,45 +534,8 @@
             name="g-recaptcha-response"
             id="g-recaptcha-response"
           />
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            autocomplete="name"
-            class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none"
-          />
-          <p class="error-message text-red-400 text-sm hidden"></p>
-
-          <div class="space-y-1">
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              autocomplete="email"
-              class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none"
-            />
-            <p class="error-message text-red-400 text-sm hidden"></p>
-          </div>
-
-          <div class="space-y-1">
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              autocomplete="off"
-              class="input-field w-full p-3 rounded bg-zinc-800 text-gray-100 border border-zinc-700 focus:outline-none"
-            ></textarea>
-            <p class="error-message text-red-400 text-sm hidden"></p>
-          </div>
-
-          <div id="form-messages" class="text-center text-sm hidden"></div>
-
-          <button
-            type="submit"
-            class="w-full bg-gray-300 text-black py-3 rounded transition hover:bg-gray-50"
-          >
-            Send Message
-          </button>
+          <input type="hidden" id="jsCheck" name="jsCheck" />
+          <input type="hidden" id="formStartTime" name="formStartTime" />
           <input
             type="text"
             id="honeypot"
@@ -400,16 +545,117 @@
             tabindex="-1"
             style="position: absolute; left: -9999px"
           />
-          <input type="hidden" id="jsCheck" name="jsCheck" />
-          <input type="hidden" id="formStartTime" name="formStartTime" />
+
+          <div class="relative">
+            <input
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder=" "
+              class="peer w-full p-4 bg-zinc-800 --text-primary border border-zinc-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E5E4E2] focus:border-[#E5E4E2] transition"
+              required
+            />
+            <label
+              for="name"
+              class="absolute left-4 top-3 --text-secondary text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#E5E4E2]"
+            >
+              Your Name
+            </label>
+            <p class="error-message text-red-400 text-sm hidden mt-1"></p>
+          </div>
+
+          <div class="relative">
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder=" "
+              class="peer w-full p-4 bg-zinc-800 --text-primary border border-zinc-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E5E4E2] focus:border-[#E5E4E2] transition"
+              required
+            />
+            <label
+              for="email"
+              class="absolute left-4 top-3 --text-secondary text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#E5E4E2]"
+            >
+              Your Email
+            </label>
+            <p class="error-message text-red-400 text-sm hidden mt-1"></p>
+          </div>
+
+          <div class="relative">
+            <textarea
+              name="message"
+              rows="5"
+              autocomplete="off"
+              placeholder=" "
+              class="peer w-full p-4 bg-zinc-800 --text-primary border border-zinc-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E5E4E2] focus:border-[#E5E4E2] transition resize-none"
+              required
+            ></textarea>
+            <label
+              for="message"
+              class="absolute left-4 top-3 --text-secondary text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:top-2 peer-focus:text-sm peer-focus:text-[#E5E4E2]"
+            >
+              Your Message
+            </label>
+            <p class="error-message text-red-400 text-sm hidden mt-1"></p>
+          </div>
+
+          <div
+            id="formSuccess"
+            class="hidden fixed bottom-6 right-6 bg-green-500/90 text-white font-medium px-5 py-3 rounded-xl shadow-lg backdrop-blur-md z-50 animate-slide-up fade-out-5s"
+          >
+            ✅ Message sent successfully!
+          </div>
+          <div
+            id="formError"
+            class="hidden fixed bottom-6 right-6 bg-red-500/90 text-white font-medium px-5 py-3 rounded-xl shadow-lg backdrop-blur-md z-50 animate-slide-up fade-out-5s"
+          >
+            ❌ Failed to send message. Try again later.
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3 px-6 bg-gradient-to-r from-[#E5E4E2] to-[#A9A9A9] text-black font-semibold text-lg rounded-lg hover:from-[#D9D9D9] hover:to-[#888888] transition hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl"
+          >
+            Send Message
+          </button>
         </form>
       </div>
     </section>
 
     <footer
-      class="text-center py-6 text-gray-500 bg-black border-t border-zinc-800"
+      class="relative py-8 text-sm sm:text-base bg-black border-t border-white/10 text-zinc-400 overflow-hidden"
     >
-      © <span id="year"></span> Ryan. All rights reserved.
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4"
+      >
+        <p class="text-center sm:text-left tracking-wide">
+          © <span id="year"></span>
+          <span class="text-white font-semibold">Ryan</span>. All rights
+          reserved.
+        </p>
+        <div class="flex gap-4">
+          <a href="#projects" class="hover:text-white transition duration-300"
+            >Projects</a
+          >
+          <a href="#contact" class="hover:text-white transition duration-300"
+            >Contact</a
+          >
+          <a
+            href="https://github.com/xodobyte"
+            target="_blank"
+            class="hover:text-white transition duration-300"
+          >
+            <i class="fab fa-github text-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="absolute inset-0 -z-10 pointer-events-none">
+        <div
+          class="absolute left-1/2 top-0 w-96 h-96 bg-gradient-to-br from-white/10 via-indigo-500/10 to-transparent blur-3xl opacity-10 transform -translate-x-1/2 -translate-y-1/2"
+        ></div>
+      </div>
     </footer>
 
     <script src="index.js" defer></script>

@@ -1,10 +1,93 @@
 @import "tailwindcss";
 
+:root {
+  --platinum: #e5e4e2;
+  --chrome: #a9a9a9;
+  --text-primary: #f1f1f1;
+  --text-secondary: #c7c7c7;
+  --text-muted: #9e9e9e;
+}
+
+body {
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+p,
+span,
+label,
+li {
+  color: var(--text-secondary);
+}
+
+.text-gray-100,
+.text-gray-200,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500 {
+  color: var(--text-secondary) !important;
+}
+
+.bg-zinc-800 {
+  backdrop-filter: blur(4px);
+}
+
+.bg-luxury-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: -50;
+  background: linear-gradient(
+    120deg,
+    #0c0c10 0%,
+    #111827 30%,
+    #1f2937 50%,
+    #2b2e3c 65%,
+    #3b3f51 80%,
+    #111827 100%
+  );
+  background-size: 200% 200%;
+  animation: bgShift 60s ease infinite;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.bg-light-drift {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(255, 0, 130, 0.07),
+      transparent 50%
+    ),
+    radial-gradient(circle at 70% 60%, rgba(0, 230, 255, 0.05), transparent 60%);
+  z-index: -40;
+  pointer-events: none;
+}
+
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 p.spider-flicker {
   font-size: clamp(2.25rem, 10vw, 3.75rem);
 }
 
-/* Keyframes for the main text jitter */
 @keyframes glitch {
   0% {
     transform: translate(0);
@@ -26,8 +109,6 @@ p.spider-flicker {
   }
 }
 
-/* Keyframes to animate the top (red) layer */
-/* It uses clip-path to reveal slices of the text */
 @keyframes glitch-top {
   0% {
     clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%);
@@ -64,7 +145,6 @@ p.spider-flicker {
   }
 }
 
-/* Keyframes to animate the bottom (cyan) layer */
 @keyframes glitch-bottom {
   0% {
     clip-path: polygon(0 60%, 100% 60%, 100% 65%, 0 65%);
@@ -137,27 +217,6 @@ p.spider-flicker {
     left: -2px;
     animation: glitch-bottom 1.3s infinite linear reverse;
   }
-
-  .platinum-orb {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(
-      circle,
-      #ffffff 0%,
-      #d1d5db 40%,
-      transparent 80%
-    );
-    filter: blur(100px);
-    opacity: 0.08;
-    z-index: -10;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.2s ease-out;
-  }
 }
 
 @keyframes wave-animation {
@@ -187,18 +246,6 @@ p.spider-flicker {
   }
 }
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @keyframes flickerEffect {
   0%,
   19.999%,
@@ -213,24 +260,6 @@ p.spider-flicker {
   63%,
   63.999% {
     opacity: 0.4;
-  }
-}
-
-@keyframes orbFloat {
-  0% {
-    transform: translate(-50%, -50%) translateX(0) translateY(0);
-  }
-  25% {
-    transform: translate(-50%, -50%) translateX(100px) translateY(-50px);
-  }
-  50% {
-    transform: translate(-50%, -50%) translateX(-150px) translateY(80px);
-  }
-  75% {
-    transform: translate(-50%, -50%) translateX(120px) translateY(100px);
-  }
-  100% {
-    transform: translate(-50%, -50%) translateX(-80px) translateY(-100px);
   }
 }
 
@@ -289,188 +318,42 @@ p.spider-flicker {
 }
 
 @layer utilities {
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 3.3s ease-out forwards;
+  @keyframes carousel {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 
-  .delay-200 {
-    animation-delay: 0.2s;
+  .animate-carousel {
+    animation: carousel 40s linear infinite;
   }
 }
 
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  20% {
     transform: translateY(0);
+    opacity: 1;
   }
-}
-
-@layer utilities {
-  .glow-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      circle at center,
-      rgba(255, 255, 255, 0.06) 0%,
-      transparent 70%
-    );
-    z-index: 0;
-    pointer-events: none;
+  80% {
+    opacity: 1;
   }
-}
-
-@layer utilities {
-  .hover\:shadow-white\/10:hover {
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  }
-}
-
-@layer utilities {
-  .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-
-  .delay-100 {
-    animation-delay: 0.1s;
-  }
-  .delay-200 {
-    animation-delay: 0.2s;
-  }
-  .delay-300 {
-    animation-delay: 0.3s;
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-
-@layer utilities {
-  .testimonial-card {
-    position: relative;
-    background: rgba(24, 24, 27, 0.6);
-    border-radius: 1.5rem;
-    backdrop-filter: blur(40px) saturate(160%) contrast(120%);
-    -webkit-backdrop-filter: blur(40px) saturate(160%) contrast(120%);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 0 40px rgba(255, 255, 255, 0.1),
-      0 0 60px rgba(0, 255, 255, 0.05), inset 0 0 8px rgba(255, 255, 255, 0.03);
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .testimonial-border-glow::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    box-sizing: border-box;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 255, 255, 0) 0%,
-      rgba(0, 255, 255, 0.08) 50%,
-      rgba(0, 255, 255, 0) 100%
-    );
-    background-size: 200% 100%;
-    animation: glow-border 8s linear infinite;
-    z-index: 1;
-    pointer-events: none;
-    mask-image: linear-gradient(#000 0 0);
-    -webkit-mask-image: linear-gradient(#000 0 0);
-    overflow: hidden;
-  }
-
-  .testimonial-card::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(
-      circle at center,
-      rgba(224, 11, 11, 0.616) 0%,
-      transparent 70%
-    );
-    animation: pulse-shimmer 12s ease-in-out infinite;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .testimonial-card:hover {
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4),
-      /* deeper base shadow */ 0 0 30px rgba(0, 255, 255, 0.04),
-      inset 0 0 6px rgba(255, 255, 255, 0.02);
-  }
-
-  .testimonial-content {
-    position: relative;
-    z-index: 2;
-    padding: 2rem;
-    color: #e0f7ff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  }
-
-  .animate-fade-in {
-    animation: fade-in 0.8s ease-in-out both;
-  }
-
-  @keyframes pulse-shimmer {
-    0% {
-      transform: rotate(0deg) scale(1);
-      opacity: 0.2;
-    }
-    50% {
-      transform: rotate(180deg) scale(1.2);
-      opacity: 0.4;
-    }
-    100% {
-      transform: rotate(360deg) scale(1);
-      opacity: 0.2;
-    }
-  }
-
-  @keyframes glow-border {
-    0% {
-      background-position: 200% 0%;
-    }
-    100% {
-      background-position: -100% 0%;
-    }
-  }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-
-.glass-pulse {
-  animation: pulse-glow 6s ease-in-out infinite;
-}
-
-@keyframes pulse-glow {
-  0%,
   100% {
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.08);
+    transform: translateY(-10px);
+    opacity: 0;
   }
-  50% {
-    box-shadow: 0 0 80px rgba(0, 255, 255, 0.16);
-  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.fade-out-5s {
+  animation: slide-up 5s ease forwards;
 }
